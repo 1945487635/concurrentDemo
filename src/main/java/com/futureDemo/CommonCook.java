@@ -1,4 +1,4 @@
-package com.futrueDemo;
+package com.futureDemo;
 
 
 public class CommonCook {
@@ -9,24 +9,24 @@ public class CommonCook {
 		thread.join();
 		Thread.sleep(2000);
 		Shicai shicai=new Shicai();
-		System.out.println("µÚ¶þ²½£ºÊ³²Äµ½Î»");
-		System.out.println("µÚÈý²½£º¿ªÊ¼Õ¹ÏÖ³øÒÕ");
+		System.out.println("ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê³ï¿½Äµï¿½Î»");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼Õ¹ï¿½Ö³ï¿½ï¿½ï¿½");
 		cook(thread.chuju, shicai);
-		System.out.println("×Ü¹²ÓÃÊ±"+(System.currentTimeMillis()-startTime)+"ms");
+		System.out.println("ï¿½Ü¹ï¿½ï¿½ï¿½Ê±"+(System.currentTimeMillis()-startTime)+"ms");
 	}
 	static class OnlineShopping extends Thread{
 		private Chuju chuju;
 		@Override
 		public void run() {
-			System.out.println("µÚÒ»²½:ÏÂµ¥");
-			System.out.println("µÚ¶þ²½£ºµÈ´ýËÍ´ï");
+			System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½:ï¿½Âµï¿½");
+			System.out.println("ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½Í´ï¿½");
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("µÚÒ»²½£º¿ìµÝËÍµ½");
+			System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½");
 			chuju =new Chuju();
 			
 		}

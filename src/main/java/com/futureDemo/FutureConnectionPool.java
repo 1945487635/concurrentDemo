@@ -1,4 +1,4 @@
-package com.futrueDemo;
+package com.futureDemo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;

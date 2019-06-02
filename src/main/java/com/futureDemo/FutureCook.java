@@ -1,4 +1,4 @@
-package com.futrueDemo;
+package com.futureDemo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -12,10 +12,10 @@ public class FutureCook {
 			@Override
 			public Chuju call() throws Exception {
 				// TODO Auto-generated method stub
-				System.out.println("µÚÒ»²½£¬ÏÂµ¥");
-				System.out.println("µÚÒ»²½£ºµÈ´ýËÍ»õ");
+				System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½");
+				System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½Í»ï¿½");
 				Thread.sleep(5000);
-				System.out.println("µÚÒ»²½:¿ìµÝËÍµ½");
+				System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½Íµï¿½");
 				
 				return new Chuju();
 			}
@@ -23,18 +23,18 @@ public class FutureCook {
 		};
 		FutureTask<Chuju> task=new FutureTask<>(onlineShopping);
 		new Thread(task).start();
-		//µÚ¶þ²½ : È¥³¬ÊÐ¹ºÂòÊ³²Ä
+		//ï¿½Ú¶ï¿½ï¿½ï¿½ : È¥ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½Ê³ï¿½ï¿½
 		Thread.sleep(2000);
 		Shicai shicai=new Shicai();
-		System.out.println("µÚÈý²½£ºÊ³²Äµ½Î»");
-		//µÚÈý²½£º ÓÃ³ø¾ßÅëâ¿Ê³²Ä
-		if (!task.isDone()) { //ÁªÏµ¿ìµÝÔ±£¬Ñ¯ÎÊÊÇ·ñµ½»õ
-			System.out.println("µÚÈý²½£º³ø¾ß»¹Ã»µ½£¬ÐÄÇéºÃ¾ÍµÈ×Å£¨ÐÄÇé²»ºÃ¾ÍÌõÓÃcancel·½·¨È¡Ïû¶©µ¥£©");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê³ï¿½Äµï¿½Î»");
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê³ï¿½ï¿½
+		if (!task.isDone()) { //ï¿½ï¿½Ïµï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Ç·ñµ½»ï¿½
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¾Íµï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½é²»ï¿½Ã¾ï¿½ï¿½ï¿½ï¿½ï¿½cancelï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		Chuju chuju=task.get();
-		System.out.println("µÚÈý²½:³ø¾ßµ½Î»£¬¿ªÊ¼Õ¹ÏÖ³øÒÕ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ßµï¿½Î»ï¿½ï¿½ï¿½ï¿½Ê¼Õ¹ï¿½Ö³ï¿½ï¿½ï¿½");
 		cook(chuju, shicai);
-		System.out.println("×Ü¹²ÓÃÊ±£º"+(System.currentTimeMillis()-startTime)+"ms");
+		System.out.println("ï¿½Ü¹ï¿½ï¿½ï¿½Ê±ï¿½ï¿½"+(System.currentTimeMillis()-startTime)+"ms");
 	}
 	static void cook(Chuju chuju,Shicai shicai) {}
 	static class Chuju {}
